@@ -1,0 +1,40 @@
+.left-sidebar{
+    width:164px;
+    margin-top:60px;
+    box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+    min-height:100vh;
+    height:auto;
+    box-sizing: border-box;
+    transition: box-shadow ease-in-out 0.1s, transform ease-in-out 0.1s;
+    background-color:white;
+
+   
+}
+.side-nav-links{
+    text-decoration: none;
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    padding-left: 10px;
+    transition:0.2s;
+    color: #3a3a3a;
+    font-size: 13px;
+}
+.side-nav{
+    height:auto;
+    max-width:100%;
+    position:sticky;
+    margin:20px 0px;
+    
+}
+    
+    
+.side-nav-links:hover {
+    color: black;
+  }
+.active{
+    font-weight: bolder;
+    color:black;
+    background-color: rgb(225, 225, 225);
+    border-right: solid 3px #ef8236;
+}

@@ -1,0 +1,76 @@
+.main-nav{
+    min-height:60px;
+    width:100%;
+    margin:0% auto;
+    border-top: solid 3px #ef8236;
+    box-shadow: 0px 1px 5px #00000033;
+    position:fixed;
+    z-index:5;
+    top:0%;
+    left:0%;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    background-color: white;
+
+
+}
+.navbar{
+    min-width:95%;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    position:fixed;
+    z-index:5;
+}
+.nav-item{
+    font-size:13px;
+    text-decoration: none;
+    color: rgb(69, 69, 69);
+    transition: 0.2s;
+}
+.nav-btn {
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 5px 10px;
+  }
+  .nav-item:hover{
+    background-color: rgb(226, 226, 226);
+  }
+  .logoimg{
+    height:50px;
+    object-fit:cover;
+  }
+  .navbar form {
+    flex-grow:1;
+    position: relative;
+
+  }
+  .navbar form input{
+    min-width:90%;
+     padding:3px 3px 3px 24px;
+     border: solid 1px #0000003e;
+     border-radius: 3px;
+     margin-left:5px;
+     
+  
+  }
+ 
+
+  .navbar form .search-icon{
+      position: absolute;
+      left:10px;
+      top:16%;
+
+  }
+  .nav-links{
+    padding:5px 8px;
+    border: solid 1px blue;
+    border-radius: 3px;
+    background-color: #e7f8fe;
+    cursor: pointer;
+  }
+  .nav-links:hover {
+    background-color: #d3e4eb;
+  }
+ 
