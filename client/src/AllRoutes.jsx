@@ -10,6 +10,8 @@ import Tags from './pages/Tags/Tags';
 import Users from './pages/Users/Users';
 import UserProfile from './pages/UserProfile/UserProfile';
 
+import Subscription from './pages/Subscription/Subscription';
+import Community from './pages/Community/Community';
 
 
 const AllRoutes = () => {
@@ -23,6 +25,10 @@ const AllRoutes = () => {
         <Route path ='/Tags' element ={<Tags />}/>
         <Route path ='/Users' element ={<Users />}/>
         <Route path ='/Users/:id' element ={<UserProfile />} />
+        <Route path = '/Subscription' element = {<Subscription />} />
+        <Route path = '/Community' element = {<Community />} />
+        
+        
 
 
     </Routes>

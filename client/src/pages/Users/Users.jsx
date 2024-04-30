@@ -1,11 +1,11 @@
 import React from 'react'
 import LeftSidebar from '../../components/LeftSidebar/LeftSidebar';
-import { useLocation } from 'react-router-dom';
+//import { useLocation } from 'react-router-dom';
 import UsersList from './UsersList';
 import "./Users.css";
 
 const Users = () => {
-  const location =useLocation()
+ // const location =useLocation()
   return (
     <div className='home-container-1'>
         <LeftSidebar />

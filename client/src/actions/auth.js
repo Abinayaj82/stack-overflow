@@ -1,9 +1,9 @@
  import * as api from '../api'
 import { setCurrentUser } from './currentUser'
 
-export const signup =(authData,navigate)=>async(dispatch)=>{
+export const signup =(authData,navigate)=>async(dispatch)=>{// this signup export it to the Auth.jsx 
     try{
-        const {data} =await api.signUp(authData)
+        const {data} =await api.signUp(authData)// this signUp is from api folder
         dispatch({type:'AUTH',data})
         dispatch(setCurrentUser(JSON.parse(localStorage.getItem('profile'))))
         navigate('/')

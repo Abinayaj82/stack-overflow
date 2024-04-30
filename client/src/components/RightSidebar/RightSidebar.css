@@ -9,7 +9,7 @@
   box-shadow: 3px 3px 10px rgb(0 0 0 / 5%), -3px -3px 10px rgb(0 0 0 / 5%);
 }
 
-.widget h4{
+.widget-h4{
     background-color:#fbf3d5;
     border: solid 1px #f1e5bc;
     margin:0%;
@@ -35,12 +35,13 @@
     margin-top:40px;
     box-shadow: 3px 3px 10px rgb(0 0 0 / 5%), -3px -3px 10px rgb(0 0 0 / 5%);
 }
-.widget-tag h4{
+.widget-h4{
     margin:0%;
     padding:15px;
     background-color: #f8f9f9;
   border: solid 1px #e3e6e8;
   font-size: 13px;
+  
 }
 .widget-tag-div{
     margin:0%;
@@ -58,3 +59,17 @@
    border-radius: 2px;
    font-size: 13px;
 }
+.widget-night{
+    background-color:#22303C;
+    color:white;
+}
+@media only screen  and (max-width:850px) {
+    .right-sidebar{
+      width:250px;
+    }
+  }
+  @media only screen  and (max-width:768px) {
+    .right-sidebar{
+        float:left;
+    }
+  }

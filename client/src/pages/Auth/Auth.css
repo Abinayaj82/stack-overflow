@@ -93,6 +93,51 @@
     font-size: 13px;
     cursor: pointer;
   }
+  .night-auth{
+    background-color:#15202B;
+    color:#495258;
+  }
+  @media only screen and (max-width:1233px){
+    .auth-container-2{
+      width:25%;
+    }
+  }
+  @media only screen and (max-width:944px){
+    .auth-container-2{
+      width:28%;
+    }
+  }
+  @media only screen and (max-width:944px){
+    .auth-container-2{
+      width:29%;
+    }
+  }
+  @media only screen and (max-width:830px){
+    .auth-container-2{
+      width:25%;
+    }
+  }
+
+  @media only screen and (max-width:850px) {
+    .auth-section{
+      display:flex;
+      flex-direction: column;
+      margin-top:60px;
+    }
+    .auth-container-2{
+      width:50%;
+    }
+  }
+  @media only screen and (max-width:476px){
+    .auth-container-2{
+      width:75%;
+    }
+  }
+  @media only screen and (max-width:320px){
+    .auth-container-2{
+      width:65%;
+    }
+  }
   
 
 

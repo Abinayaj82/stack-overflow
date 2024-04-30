@@ -110,3 +110,69 @@ resize:vertical;
     line-height:18px;
     white-space:pre-line;
   }
+  @media only screen and (max-width:798px) {
+    .question-details-page{
+      width:550px;
+    }
+    .post-ans-container form textarea{
+      width:500px;
+    }
+  }
+  @media only screen and (max-width:627px) {
+    .question-details-page{
+      width:500px;
+    }
+    .post-ans-container form textarea{
+      width:450px;
+    }
+  }
+  @media only screen and (max-width:563px) {
+    .question-details-page{
+      width:450px;
+    }
+    .post-ans-container form textarea{
+      width:400px;
+    }
+  }
+  @media only screen and (max-width:511px) {
+    .question-details-page{
+      width:400px;
+    }
+    .post-ans-container form textarea{
+      width:350px;
+    }
+  }
+  @media only screen and (max-width:463px) {
+    .question-details-page{
+      width:350px;
+    }
+    .post-ans-container form textarea{
+      width:300px;
+    }
+  }
+  @media only screen and (max-width:415px) {
+    .question-details-page{
+      width:300px;
+    }
+    .post-ans-container form textarea{
+      width:250px;
+    }
+  }
+  @media only screen and (max-width:366px) {
+    .question-details-page{
+      width:250px;
+      margin-left:-10px;
+    }
+    .post-ans-container form textarea{
+      width:250px;
+    }
+  }
+  @media only screen and (max-width:320px) {
+    .question-details-page{
+      width:250px;
+      margin-left:-10px;
+    }
+    .post-ans-container form textarea{
+      width:250px;
+    }
+  }

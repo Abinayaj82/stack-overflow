@@ -75,7 +75,7 @@ const QuestionsDetails = () => {
     const [Answer,setAnswer] =useState('')
     const User=useSelector((state)=>(state.currentUserReducer))
     const location =useLocation()
-    const url = 'http://localhost:3000'
+    const url = 'https://stackover-flow-abi.netlify.app'
 
     const handlePostAns =(e,answerLength)=>{
         e.preventDefault()

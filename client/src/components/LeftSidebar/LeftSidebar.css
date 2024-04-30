@@ -38,3 +38,18 @@
     background-color: rgb(225, 225, 225);
     border-right: solid 3px #ef8236;
 }
+.night-left{
+    background-color:#15202B;
+    color:white;
+    transition:0.2s;
+    border-right: white;
+}
+.night-left:hover{
+    color:white;
+}
+@media only screen and (max-width:738px) {
+    .left-sidebar{
+        display:none;
+    }
+    
+}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import icon from "../../assets/stack-overflow.png";
 import {useDispatch} from 'react-redux';
 import {useNavigate} from 'react-router-dom';
@@ -6,12 +6,18 @@ import "./Auth.css";
 import AboutAuth from "./AboutAuth";
 import { signup , login} from '../../actions/auth'
 
+import axios from 'axios';
+
+const  API_ENDPOINT= `https://api.openweathermap.org/data/2.5/weather?`;
+const API_KEY =`a0d24f1daae749e36ccf910fefc2aea6`;
+
 const Auth = () => {
   const [isSignup, setIsSignup] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");  
   const [password, setPassword] = useState("");  
 
+  
   const dispatch =useDispatch();
   const navigate = useNavigate();
   const handleSwitch =() =>{
@@ -35,11 +41,51 @@ const Auth = () => {
   }
   console.log({name,email,password});
  }
+ const [latitude, setLatitude]= useState('');
+   const [longitude, setLongitude]= useState('');
+   const [responseData, setResponseData]= useState('')
+   useEffect(()=>  {
+    navigator.geolocation.getCurrentPosition((position)=>{
+     setLatitude(position.coords.latitude)
+     setLongitude(position.coords.longitude)
+
+    })
+     const finalApi = `${API_ENDPOINT}lat=${latitude}&lon=${longitude}&exclude=hourly,daily&appid=${API_KEY}`
+     //console.log(finalApi)
+         axios.get(finalApi)
+
+   .then((response)=>{
+        setResponseData(response.data)
+     //  console.log(response.data)
+    })
+    .catch(error=>{
+        console.log(error);
+    })
+    
+     },[latitude,longitude])
+    if(!latitude)
+     return <>Loading ....</>
+ const getTheme =()=>{
+      if(!responseData) return 'default'
+         const isDay = responseData.dt > responseData.sys.sunrise && responseData.dt < responseData.sys.sunset;
+
+     //const isDay = responseData.dt === 1709982899; 
+       // console.log(isDay);
+         if (!isDay) {
+          return 'night-auth'
+        } else{
+         return 'day'
+       }
+        
+
+}
+   const theme =getTheme();
+
   
   return (
-    <section className='auth-section'>
+    <section className={`auth-section ${theme}`}>
        { isSignup && <AboutAuth />}
-      <div className='auth-container-2'>
+      <div className={`auth-container-2 ${theme}`}>
            { !isSignup && <img src={icon} alt="stack over flow" className='login-logo'/>}
            <form onSubmit={handleSubmit}>
                {

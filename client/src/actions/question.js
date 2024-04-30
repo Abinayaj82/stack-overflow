@@ -5,6 +5,7 @@ import * as api  from '../api'
     const {data}=await api.postQuestion(questionData)
     dispatch({type:"POST_QUESTION",payload:data})
     dispatch(fetchAllQuestions())
+    dispatch(askedQuestions(questionData.userId))
     navigate('/')
  } catch (error) {
     console.log(error)
@@ -32,8 +33,9 @@ export const postAnswer = (answerData) => async(dispatch)=>{
 }
  export const deleteQuestion =(id,navigate) => async(dispatch)=>{
    try {
-      const { data }=  await api.deleteQuestion(id)
+         await api.deleteQuestion(id)
       dispatch(fetchAllQuestions())
+      dispatch(askedQuestions(id))
       navigate('/')
    } catch (error) {
       console.log(error)
@@ -41,7 +43,7 @@ export const postAnswer = (answerData) => async(dispatch)=>{
  }
   export const deleteAnswer =(id, answerId,noOfAnswers)=> async(dispatch)=>{
    try {
-      const { data } = await api.deleteAnswer(id,answerId,noOfAnswers)
+        await api.deleteAnswer(id,answerId,noOfAnswers)
       dispatch(fetchAllQuestions())
    } catch (error) {
       console.log(error)
@@ -49,10 +51,19 @@ export const postAnswer = (answerData) => async(dispatch)=>{
   }
   export const voteQuestion =(id,value,userId)=> async(dispatch)=>{
    try {
-      const {data}=await api.voteQuestion(id,value,userId)
+       await api.voteQuestion(id,value,userId)
       dispatch(fetchAllQuestions())
    } catch (error) {
       console.log(error)
    }
 
+  }
+
+  export const askedQuestions =(id)=> async(dispatch)=>{
+   try {
+      const questions = await api.askedQuestions(id)
+      dispatch({type:'ASKED_QUESTION',payload:questions})
+   } catch (error) {
+      console.log(error)
+   }
   }

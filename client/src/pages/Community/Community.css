@@ -1,0 +1,133 @@
+.home-container-1{
+    overflow-x: hidden;
+}
+.community-container{
+    width:1100px;
+    display:flex;
+    justify-content: space-between;
+}
+.post-container{
+    width:630px;
+    margin-top:60px;
+
+}
+
+.post-side-container{
+    width:400px;
+    background-color:#Ebeef2;
+    margin-top:60px;
+    margin-left:640px;
+    margin-right:50px;
+    position: fixed;
+    border-radius:5px;
+
+
+}
+.avatar{
+    
+    margin-left: 15px;
+    margin-top:8px;
+}
+.avatar-input{
+    display:flex;
+}
+.input-box{
+    margin-top:10px;
+   
+}
+.input-box input{
+    padding:6px;
+    width:500px;
+    border:none;
+    border-radius:15px;
+}
+
+@media only screen and (max-width:1191px){
+    .post-side-container{
+        width:300px;
+    }
+}
+@media only screen and (max-width:1088px){
+    .post-side-container{
+        width:250px;
+    }
+}
+@media only screen and (max-width:1040px){
+    .post-side-container{
+        width:200px;
+    }
+}
+@media only screen and (max-width:988px){
+    .post-side-container{
+        display:none;
+    }
+}
+@media only screen and (max-width:779px){
+    .post-side-container{
+        display:none;
+    }
+    .post-container{
+        width:580px;
+    }
+}
+@media only screen and (max-width:772px){
+    .post-container{
+        width:550px;
+    }
+}
+@media only screen and (max-width:612px){
+    .input-box input{
+        width:450px;
+    }
+    .post-container{
+        width:540;
+    }
+}
+@media only screen and (max-width:604px){
+    
+    .input-box input{
+        width:400px;
+    }
+    .post-container{
+        width:500px;
+    }
+}
+@media only screen and (max-width:555px){
+    .input-box input{
+        width:350px;
+    }
+   
+    .post-container{
+        width:450px;
+    }
+}
+@media only screen and (max-width:502px){
+    
+    .post-container{
+        width:400px;
+    }
+}
+@media only screen and (max-width:451px){
+    .input-box input{
+        width:300px;
+    }
+    .post-container{
+        width:350px;
+    }
+}
+@media only screen and (max-width:402px){
+    .input-box input{
+        width:250px;
+    }
+    .post-container{
+        width:300px;
+    }
+}
+@media only screen and (max-width:355px){
+    .input-box input{
+        width:200px;
+    }
+    .post-container{
+        width:250px;
+    }
+}
