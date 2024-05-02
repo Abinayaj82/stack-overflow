@@ -83,6 +83,10 @@
 .sideBar-mobile{
     margin-top:350px;
 }
+.x-mark{
+  color:blue;
+  cursor:pointer;
+}
  @media only screen and (max-width:738px) {
      .nav-item{
       font-size:10px;
@@ -99,6 +103,7 @@
      }
      .hamburger-bar{
       display:block;
+      cursor:pointer;
      }
  }
  @media only screen and (max-width:565px) {

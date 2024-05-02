@@ -40,8 +40,9 @@ const InputPost = () => {
        }
        const newPost ={
         userId :User?.result._id,
-        name:User?.result.name,
+        name:User?.result?.name,
         desc : desc.current.value
+        
        }
        if(image){
         const data = new FormData();

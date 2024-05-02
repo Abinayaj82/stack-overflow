@@ -21,18 +21,19 @@ const PostData = ({data}) => {
          <p>{ data?.name.charAt(0).toUpperCase()}</p>
          </div>
        <div>
-          <b>{data.name} </b>
+          <b>{data?.name} </b>
           <p className='post-time'>Posted {moment(data.createdAt).fromNow()}</p>
       </div>
         </div>
         <span>{data.desc}</span>
 
-     {data?.image ?
+     {data?.avatar ?
      <img className='post-image'
-     src={data.image ? process.env.REACT_APP_PUBLIC_FOLDER + data.image : ""}
+     //src={data.image ? process.env.REACT_APP_PUBLIC_FOLDER + data.image : ""}
+     src={data.avatar}
      alt=""
    /> :
-      <video src ={data.video ? process.env.REACT_APP_PUBLIC_FOLDER + data.video : ""} controls />
+      <video src ={data.avatar} controls />
 
     }
       

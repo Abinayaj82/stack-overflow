@@ -96,29 +96,29 @@ const Navbar = () => {
           {sideBar && 
              <div className ='sideBar-mobile'>
              <nav className='side-nav'>
-              <p onClick = {handleSideOut}>X</p>
+              <p  className ="x-mark" onClick = {handleSideOut}>X</p>
          <NavLink to ="/" className={`side-nav-links ${theme}`} activeClassname="active">
-            <p>Home</p>
+            <p className ={theme}>Home</p>
          </NavLink>
          <div className='side-nav-div'>
            <div>
-               <p style={{marginLeft:"7px"}}>PUBLIC</p>
+               <p  style={{marginLeft:"7px"}}>PUBLIC</p>
            </div>
            <NavLink to ="/Questions" className={`side-nav-links ${theme}`}  activeClassname="active" style={{marginLeft:"20px"}}>
             <img src={globe} alt="globe" style={{width:"18px"}} />
-            <p style={{marginLeft:"7px"}}>Questions</p>
+            <p className ={theme} style={{marginLeft:"7px"}}>Questions</p>
            </NavLink>
            <NavLink to ="/Tags" className={`side-nav-links ${theme}`}  activeClassname="active" style={{marginLeft:"20px"}}>
-            <p>Tags</p>
+            <p className ={theme}>Tags</p>
            </NavLink>
            <NavLink to ="/Users" className={`side-nav-links ${theme}`}  activeClassname="active" style={{marginLeft:"20px"}}>
-            <p>Users</p>
+            <p className ={theme}>Users</p>
            </NavLink>
            <NavLink to ="/Subscription" className={`side-nav-links ${theme}`}  activeClassname="active" style={{marginLeft:"20px"}}>
-            <p>Subscription</p>
+            <p className ={theme}>Subscription</p>
            </NavLink>
            <NavLink to ="/Community" className={`side-nav-links ${theme}`}  activeClassname="active" style={{marginLeft:"20px"}}>
-            <p>Community</p>
+            <p className ={theme}>Community</p>
            </NavLink>
          </div>
          </nav> 

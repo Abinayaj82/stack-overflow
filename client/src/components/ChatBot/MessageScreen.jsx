@@ -21,7 +21,6 @@ const handleMessageSend =(e)=>{
           instruction: value,
           temperature: 0.1,
           max_tokens: 500,
-          fallback_providers: "",
      }
     };
     
@@ -29,7 +28,7 @@ const handleMessageSend =(e)=>{
    
     // console.log(message,"message")
     
-     axios
+ axios
   .request(options)
   .then((response)=>{
     const result = response.data
@@ -38,13 +37,10 @@ const handleMessageSend =(e)=>{
       setValue(" ");
 
 })
-
-
-
-  .catch(err => console.error(err));
+.catch(err => console.error(err));
 
      //setMessage(results.data);
-     //console.log(value)
+     console.log(value)
     
      
 

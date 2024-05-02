@@ -64,7 +64,7 @@ const Auth = () => {
     
      },[latitude,longitude])
     if(!latitude)
-     return <>Loading ....</>
+     return <>Loading....</>
  const getTheme =()=>{
       if(!responseData) return 'default'
          const isDay = responseData.dt > responseData.sys.sunrise && responseData.dt < responseData.sys.sunset;

@@ -44,7 +44,7 @@ function App() {
      
       },[latitude,longitude])
      if(!latitude)
-      return <>Loading ....</>
+      return <>Allow location access and reload the page to open website</>
   const getTheme =()=>{
        if(!responseData) return 'default'
           const isDay = responseData.dt > responseData.sys.sunrise && responseData.dt < responseData.sys.sunset;
